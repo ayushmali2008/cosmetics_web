@@ -1,0 +1,236 @@
+.checkout-page {
+  max-width: 1200px;
+  margin: 32px auto;
+  padding: 0 20px 48px;
+}
+
+.checkout-container {
+  display: grid;
+  gap: 24px;
+}
+
+.checkout-header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--text-primary);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7a7a7a;
+  font-size: 11px;
+  margin: 0 0 8px;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(320px, 0.9fr);
+  gap: 24px;
+}
+
+.checkout-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.04);
+}
+
+.checkout-card h3 {
+  margin: 0 0 16px;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.checkout-user-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 24px;
+}
+
+.checkout-user-card .label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.checkout-user-card strong {
+  color: var(--text-primary);
+}
+
+.checkout-items {
+  display: grid;
+  gap: 16px;
+}
+
+.checkout-item {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.checkout-item img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.checkout-item-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--text-primary);
+}
+
+.checkout-item-copy strong {
+  font-size: 0.98rem;
+}
+
+.checkout-item-copy span {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.checkout-item-total {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.summary-card {
+  align-self: start;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.discount-row {
+  color: var(--success-color);
+}
+
+.summary-divider {
+  height: 1px;
+  background: var(--border-color);
+  margin: 18px 0;
+}
+
+.total-row {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.coupon-box {
+  display: flex;
+  gap: 10px;
+  margin: 18px 0 12px;
+}
+
+.coupon-box input {
+  flex: 1;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.coupon-box button,
+.checkout-action-btn,
+.coupon-chip {
+  border: none;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.coupon-box button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 16px;
+  font-weight: 700;
+}
+
+.coupon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.coupon-chip {
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.checkout-error {
+  background: #fff1f1;
+  color: #b42318;
+  border: 1px solid #f2b9b7;
+  padding: 12px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.checkout-action-btn {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: #fff;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.checkout-action-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.empty-checkout {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-user-card {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-item {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .checkout-item-total {
+    grid-column: 2;
+    justify-self: end;
+  }
+}

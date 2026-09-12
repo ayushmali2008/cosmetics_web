@@ -1,0 +1,99 @@
+.genz-dropdown {
+position: absolute;
+top: 100%;
+left: 168px;
+width: 68vw;
+transform: translateX(-50%) translateY(-10px);
+max-width: 1200px;
+background-color: #ffffff !important;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+z-index: 999;
+padding: 40px;
+}
+.genz-dropdown-container {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 30px;
+}
+.genz-dropdown .dropdown-column {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+.genz-dropdown .column-title {
+color: #ff3f6c;
+font-size: 14px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin: 0 0 10px 0;
+font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.genz-dropdown .column-title.cyan-title {
+color: #00bcd4;
+}
+.genz-dropdown .dropdown-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.genz-dropdown .dropdown-list li {
+margin: 0;
+}
+.genz-dropdown .dropdown-list li a {
+color: #282c3f;
+font-size: 14px;
+font-weight: 400;
+text-decoration: none;
+display: block;
+padding: 4px 0;
+transition: all 0.2s ease;
+font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.genz-dropdown .dropdown-list li a:hover {
+color: #ff3f6c;
+font-weight: 600;
+transform: translateX(2px);
+}
+.genz-dropdown .dropdown-list li a.bold-item {
+font-weight: 700;
+}
+.nav-links li:hover .genz-dropdown {
+opacity: 1;
+visibility: visible;
+transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 1200px) {
+.genz-dropdown {
+width: 95vw;
+padding: 30px;
+}
+.genz-dropdown-container {
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+}
+@media (max-width: 992px) {
+.genz-dropdown-container {
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+.genz-dropdown .column-title {
+font-size: 13px;
+}
+.genz-dropdown .dropdown-list li a {
+font-size: 13px;
+}
+}
+@media (max-width: 768px) {
+.genz-dropdown {
+display: none;
+}
+}

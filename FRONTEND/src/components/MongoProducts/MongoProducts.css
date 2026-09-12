@@ -1,0 +1,379 @@
+/* ========================================
+   MONGO PRODUCTS
+======================================== */
+
+.mongo-products {
+  width: 100%;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.mongo-products-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mongo-products-header h2 {
+  margin: 0 0 8px;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.mongo-products-header p {
+  margin: 0;
+
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.products-grid {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+
+/* ========================================
+   PRODUCT CARD
+======================================== */
+
+.product-card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.product-image {
+  width: 100%;
+  height: 260px;
+
+  background: #f8f8f8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.04);
+}
+
+
+/* ========================================
+   PRODUCT INFO
+======================================== */
+
+.product-info {
+  padding: 18px 20px 20px;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.product-brand {
+  margin-bottom: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #6366f1;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   PRODUCT NAME
+======================================== */
+
+.product-name {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  line-height: 1.45;
+
+  height: 46px;
+
+  overflow: hidden;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+/* ========================================
+   RATING
+======================================== */
+
+.product-rating {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-top: 13px;
+  padding-top: 12px;
+
+  border-top: 1px solid #eeeeee;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rating-star {
+  color: #f5b301;
+}
+
+
+/* ========================================
+   PRICE
+======================================== */
+
+.product-price {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 14px;
+}
+
+.current-price {
+  font-size: 20px;
+
+  font-weight: 700;
+
+  color: #374b8f;
+}
+
+.original-price {
+  color: #9ca3af;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: line-through;
+}
+
+
+/* ========================================
+   DISCOUNT
+======================================== */
+
+.discount-badge {
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  background: #e7f8f1;
+
+  color: #10a77a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+}
+
+
+/* ========================================
+   STOCK
+======================================== */
+
+.product-stock {
+  margin-top: 10px;
+
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+
+/* ========================================
+   ADD TO CART
+======================================== */
+
+.add-cart-btn {
+  width: 100%;
+
+  margin-top: 17px;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6366f1,
+      #8b5cf6
+    );
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(99, 102, 241, 0.3);
+}
+
+.add-cart-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* ========================================
+   OUT OF STOCK
+======================================== */
+
+.add-cart-btn:disabled {
+  background: #d1d5db;
+
+  color: #6b7280;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+
+  transform: none;
+}
+
+
+/* ========================================
+   LOADING / ERROR
+======================================== */
+
+.mongo-products-message {
+  text-align: center;
+
+  padding: 40px;
+
+  font-size: 15px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+  .products-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+  }
+
+  .product-image {
+    height: 240px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .mongo-products {
+    padding: 30px 15px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .product-info {
+    padding: 16px;
+  }
+}

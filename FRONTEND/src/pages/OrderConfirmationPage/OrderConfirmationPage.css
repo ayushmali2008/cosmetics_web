@@ -1,0 +1,101 @@
+.order-confirmation-page {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0 20px 48px;
+}
+
+.order-confirmation-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 36px 24px;
+  box-shadow: 0 12px 30px rgba(17, 17, 17, 0.04);
+  text-align: center;
+}
+
+.confirmation-badge {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--success-color), #00d563);
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #7a7a7a;
+  font-size: 11px;
+  margin: 0 0 8px;
+}
+
+.order-confirmation-card h1 {
+  margin: 0 0 24px;
+  color: var(--text-primary);
+}
+
+.confirmation-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.confirmation-summary div {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 18px 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.confirmation-summary span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.primary-btn,
+.secondary-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.secondary-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.confirmation-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+  .confirmation-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .confirmation-actions {
+    display: grid;
+  }
+}
